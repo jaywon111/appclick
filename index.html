@@ -15,10 +15,10 @@
                 </div>
             <div class="login-form">
                 <h2>Admin Login</h2>
-                <form>
+                <form id="loginForm">
                     <div class="input-group">
                         <i class="fas fa-envelope"></i>
-                        <input type="text" placeholder="Username" id="username" required>
+                        <input type="text" placeholder="Email" id="username" required>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-lock"></i>
@@ -33,5 +33,18 @@
             <img src="Assets/PICSapp.jpg" alt="Coding Background">
             </div>
     </div>
+    <script>
+       const loginForm = document.getElementById("loginForm");
+       loginForm.addEventListener("submit", function(event) {
+        const email = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (email === "appclick@gmail.com" && password === "1234AppClick") {
+            alert('Correct! Successfully logged in')
+        } else {
+            alert("Incorrect credentials! Please check email/password")
+        }
+       })
+    </script>
 </body>
 </html>
